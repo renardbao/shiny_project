@@ -1,4 +1,5 @@
-
+#模擬各個專案的案件量
+#生成資料
 library(magrittr)
 library(dplyr)
 library(ggplot2)
