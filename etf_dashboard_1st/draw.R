@@ -1,42 +1,6 @@
 source("etf.R")
 
-#將資料便形成長資料來方便畫圖----
-# etf.data.melt <- list()
-# for (i in 1:length(etf.code)){
-#   etf.data.melt[[paste0("etf",etf.code[i])]] <- 
-#     data.frame(
-#       date = merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#         merge(twi,by = "date") %>% merge(oil,by = "date") %>% "["(,"date") ,
-#       open = merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#         merge(twi,by = "date") %>% merge(oil,by = "date") %>% 
-#         "["(,"open") %>% scale(),
-#       close = merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#         merge(twi,by = "date") %>% merge(oil,by = "date") %>% 
-#         "["(,"close") %>% scale(),
-#       high = merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#         merge(twi,by = "date") %>% merge(oil,by = "date") %>% 
-#         "["(,"high") %>% scale() ,
-#       low =  merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#         merge(twi,by = "date") %>% merge(oil,by = "date") %>%
-#         "["(,"low") %>% scale(),
-#       twi = merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#         merge(twi,by = "date") %>% merge(oil,by = "date") %>% 
-#         "["(,"twi") %>% scale(),
-#       sp500 = merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#         merge(twi,by = "date") %>% merge(oil,by = "date") %>% 
-#         "["(,"sp500") %>% scale(),
-#       brent = merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#         merge(twi,by = "date") %>% merge(oil,by = "date") %>% 
-#         "["(,"brent") %>% scale() ,
-#       change.rate = merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#         merge(twi,by = "date") %>% merge(oil,by = "date") %>% 
-#         "["(,"change.rate") %>% scale()
-#       
-#     )  %>% melt(id.vars = "date")
-#   
-#   
-# }
-
+#transform data for ggplot2
 etf.data.melt <- list()
 for (i in 1:length(etf.code)){
   etf.data.melt[[paste0("etf",etf.code[i])]] <- 

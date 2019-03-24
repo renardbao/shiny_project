@@ -39,41 +39,4 @@ etf$low %<>% as.numeric(2)
 etf$close %<>%  as.numeric(2)
 etf$volume %<>%  str_replace_all(",","") %>% as.numeric(2)
 
-# #完整資料串
-# etf.data <- list()
-# for (i in 1:length(etf.code)){
-#   etf.data[[paste0("etf",etf.code[i])]] <- 
-#     data.frame(
-#                open = merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#                  merge(twi,by = "date") %>% merge(oil,by = "date") %>% 
-#                  "["(,"open") %>% diff(),
-#                close = merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#                  merge(twi,by = "date") %>% merge(oil,by = "date") %>% 
-#                  "["(,"close") %>% diff(),
-#                high = merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#                  merge(twi,by = "date") %>% merge(oil,by = "date") %>% 
-#                  "["(,"high") %>% diff(),
-#                low =  merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#                  merge(twi,by = "date") %>% merge(oil,by = "date") %>%
-#                  "["(,"low") %>% diff(),
-#                twi = merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#                  merge(twi,by = "date") %>% merge(oil,by = "date") %>% 
-#                  "["(,"twi") %>% diff() ,
-#                sp500 = merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#                  merge(twi,by = "date") %>% merge(oil,by = "date") %>% 
-#                  "["(,"sp500") %>% diff(),
-#                brent = merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#                  merge(twi,by = "date") %>% merge(oil,by = "date") %>% 
-#                  "["(,"brent") %>% diff(),
-#                change.rate = merge(etf %>% filter(code == etf.code[i]),sp500,by = "date") %>% 
-#                  merge(twi,by = "date") %>% merge(oil,by = "date") %>% 
-#                  "["(,"change.rate") %>% diff()
-#                
-#                )
-# }
-# 
-# 
-
-
-
 
